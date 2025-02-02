@@ -1,0 +1,160 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo global */
+/* Fundo com textura sutil e gradiente */
+body {
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para títulos e textos */
+.title {
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.label-text {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Modernização da área de saída do Morse */
+.output-text {
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-height: 50px;
+}
+
+/* Cards com bordas arredondadas */
+.card {
+  border-radius: 10px;
+}
+
+.card-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Destaque do símbolo atual */
+.current-symbol {
+  background-color: #ffeb3b;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Overlay para flash */
+#flashOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.5em;
+  }
+  
+  .label-text {
+    font-size: 0.9em;
+  }
+  
+  .output-text {
+    font-size: 1em;
+  }
+  
+  .btn {
+    font-size: 0.9em;
+    padding: 0.5rem;
+  }
+}
+
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.converter {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 20px;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #005bb5;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.output {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e9e9e9;
+  border-radius: 4px;
+  min-height: 40px;
+  font-size: 1.1em;
+  word-wrap: break-word;
+}
+
+.play-button {
+  margin-top: 10px;
+  width: 100%;
+}
